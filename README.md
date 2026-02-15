@@ -135,3 +135,10 @@ Contributions are always welcome! 💬
 ---
 
 ⭐ **If you like this project, give it a star!**
+
+---
+
+© 2026 [Zenith Open Source Projects](https://zenithprojects.up.railway.app/). All Rights Reserved.  
+Zenith is a Open Source Project Idea's by @roshhellwett
+
+---
