@@ -1,4 +1,4 @@
-# ⚙️ Egnima
+# ⚙️ Project Egnima
 
 > **Egnima** — a sleek and modular C/C++ project built with CMake. Designed for clarity, scalability, and experimentation.
 
