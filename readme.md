@@ -138,7 +138,7 @@ Contributions are always welcome! 💬
 
 ---
 
-© 2026 [Zenith Open Source Projects](https://zenithprojects.up.railway.app/). All Rights Reserved.  
+© 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved.  
 Zenith is a Open Source Project Idea's by @roshhellwett
 
 ---
