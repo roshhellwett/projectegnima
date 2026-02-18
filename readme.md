@@ -1,144 +1,63 @@
-# ⚙️ Project Egnima
+![Repo Size](https://img.shields.io/github/repo-size/roshhellwett/projectegnima?style=for-the-badge)
+![Stars](https://img.shields.io/github/stars/roshhellwett/projectegnima?style=for-the-badge)
+![Forks](https://img.shields.io/github/forks/roshhellwett/projectegnima?style=for-the-badge)
+![Issues](https://img.shields.io/github/issues/roshhellwett/projectegnima?style=for-the-badge)
+![C/C++](https://img.shields.io/badge/Language-C%2FC%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B)
 
-> **Egnima** — a sleek and modular C/C++ project built with CMake. Designed for clarity, scalability, and experimentation.
+# PROJECT EGNIMA
 
----
-
-## 📘 Table of Contents
-
-* [✨ About](#-about)
-* [🧩 Features](#-features)
-* [🚀 Getting Started](#-getting-started)
-
-* [⚙️ Prerequisites](#️-prerequisites)
-* [🏗️ Building](#️-building)
-* [▶️ Running](#️-running)
-* [💡 Usage](#-usage)
-* [📂 Project Structure](#-project-structure)
-* [📜 License](#-license)
-* [🤝 Contributing](#-contributing)
-* [📧 Contact](#-contact)
+Egnima is a sleek, modular command-line utility written in C/C++ for encoding and decoding text messages. It utilizes a custom XOR cipher paired with alphanumeric keys, providing a lightweight, interactive sandbox for exploring system-level cryptography, data formatting, and modular programming.
 
 ---
 
-## ✨ About
+## ✨ Key Features
 
-**Egnima** is a modular, C/C++-based project crafted to explore system-level logic, modular programming, and inter-component communication. Whether you’re learning or building, Egnima’s structure offers a strong foundation for experimenting with sender-receiver logic, encryption, or data flow simulation.
+### 🔐 Cryptography & Encoding
+* **XOR Cipher Engine:** Secures messages using an efficient XOR bitwise operation tied to user-defined alphanumeric keys.
+* **Hexadecimal Formatting:** Safely exports and imports encrypted data in a cleanly formatted, space-separated hexadecimal string (e.g., `09 07 0F 0F 0D`), preventing terminal control character errors.
+* **Dynamic Byte Tracking:** Built-in debug readouts actively track and verify message byte lengths during both transmission (sender) and reception (receiver).
 
-> 🧠 *Think of it as your C/C++ sandbox for mastering modular architecture and build automation.*
+## ⚡ Core Functionality
+* **Interactive Terminal UI:** Features an intuitive, continuous menu-driven interface allowing users to encrypt or decrypt multiple messages without restarting the application.
+* **Modular Architecture:** Cleanly separated logic with dedicated `encrypt` (Sender) and `decrypt` (Receiver) header and source files for high maintainability.
+* **Modern Build System:** Fully supported by a modern CMake build configuration targeting the C++17 standard for seamless cross-platform compilation.
 
----
+## 🛠️ Prerequisites
 
-## 🧩 Features
+To build and run Project Egnima, you will need:
+* **CMake:** Version 3.27 or higher.
+* **C++ Compiler:** C++17 compatible compiler (GCC, Clang, or MSVC).
+* **Terminal:** Any standard command-line interface.
 
-✅ Clean modular structure — separated headers & source files
-✅ Modern CMake build support
-✅ Cross-platform: Linux, macOS, Windows
-✅ Extendable logic for encoding, networking, or simulation
-✅ Lightweight and beginner-friendly
+## 🚀 Build Instructions
 
----
+Project Egnima uses CMake for cross-platform compilation. Follow these steps to build from source:
 
-## 🚀 Getting Started
-
-### ⚙️ Prerequisites
-
-Ensure you have:
-
-* 🧰 **CMake** ≥ 3.10
-* 💻 **C/C++ Compiler** (GCC / Clang / MSVC)
-* 🧱 *(Optional)* **Make** or **Ninja** build tools
-
----
-
-### 🏗️ Building
-
+1. **Clone the repository:**
 ```bash
-git clone https://github.com/roshhellwett/Egnima.git
-cd Egnima
-mkdir build && cd build
-cmake ..
-cmake --build .
+   git clone [https://github.com/roshhellwett/projectegnima.git](https://github.com/roshhellwett/projectegnima.git)
+   cd projectegnima
+   run the .exe
 ```
-
-> 💡 Tip: Use `cmake -G "Ninja" ..` for faster builds.
-
----
-
-### ▶️ Running
-
-After building, you’ll find the executable inside the `build` folder.
-
-```bash
-./Egnima [options]
-```
-
-Example:
-
-```bash
-./Egnima --mode sender --file input.txt
-./Egnima --mode receiver --output output.txt
-```
-
----
-
-## 💡 Usage
-
-| Mode        | Description                       | Example Command                                |
-| ----------- | --------------------------------- | ---------------------------------------------- |
-| 📨 Sender   | Sends data from an input file     | `./Egnima --mode sender --file input.txt`      |
-| 📥 Receiver | Receives and saves data to output | `./Egnima --mode receiver --output output.txt` |
-
-> ⚡ Experiment with different data sources or add your own algorithms inside the modules!
 
 ---
 
 ## 📂 Project Structure
-
 ```
-Egnima/
-├── CMakeLists.txt        # Build configuration
-├── main.cpp              # Entry point
-├── sender.cpp/.h         # Sender module
-├── receiver.cpp/.h       # Receiver module
-├── LICENSE               # License file
-└── README.md             # This file 😎
+projectegnima/
+├── .github/workflows/
+│   └── cmake-multi-platform.yml  # CI/CD build configuration
+├── CMakeLists.txt                # CMake C++17 build configuration
+├── main.cpp                      # Application entry point & interactive UI loop
+├── encrypt.h / encrypt.cpp       # Sender module: XOR encryption and Hex formatting
+├── decrypt.h / decrypt.cpp       # Receiver module: Hex parsing and XOR decryption
+├── projectenigma.exe             # Pre-compiled Windows executable
+├── license                       # Open source license documentation
+├── security.md                   # Security and vulnerability details
+└── readme.md                     # Project documentation
 ```
-
----
-
-## 📜 License
-
-Licensed under the **Apache License 2.0** — see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🤝 Contributing
-
-Contributions are always welcome! 💬
-
-1. 🍴 Fork the repository
-2. 🌱 Create a feature branch — `git checkout -b feature/AmazingFeature`
-3. 💾 Commit your changes — `git commit -m 'Add AmazingFeature'`
-4. 🚀 Push — `git push origin feature/AmazingFeature`
-5. 🔁 Open a Pull Request
-
-> ✍️ Make sure your code follows consistent formatting and passes all builds.
-
----
-
-## 📧 Contact
-
-👨‍💻 Developed with ❤️ by **[@roshhellwett](https://github.com/roshhellwett)**
-📬 Have suggestions? [Open an issue](https://github.com/roshhellwett/Egnima/issues) or start a discussion!
-
----
-
-⭐ **If you like this project, give it a star!**
 
 ---
 
 © 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved.  
 Zenith is a Open Source Project Idea's by @roshhellwett
-
----
