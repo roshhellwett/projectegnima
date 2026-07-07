@@ -10,17 +10,17 @@ Egnima is a sleek, modular command-line utility written in C/C++ for encoding an
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-### 🔐 Cryptography & Encoding
-* **XOR Cipher Engine:** Secures messages using an efficient XOR bitwise operation tied to user-defined alphanumeric keys.
-* **Hexadecimal Formatting:** Safely exports and imports encrypted data in a cleanly formatted, space-separated hexadecimal string (e.g., `09 07 0F 0F 0D`), preventing terminal control character errors.
-* **Dynamic Byte Tracking:** Built-in debug readouts actively track and verify message byte lengths during both transmission (sender) and reception (receiver).
+### Cryptography & Encoding
+- **XOR Cipher:** Encrypts messages using XOR with user-defined alphanumeric keys.
+- **Hex Output:** Encrypted data is exported as space-separated hex strings (e.g., `09 07 0F 0F 0D`) to avoid terminal control character issues.
+- **Byte Tracking:** Debug output shows message byte lengths during both encryption and decryption.
 
-## ⚡ Core Functionality
-* **Interactive Terminal UI:** Features an intuitive, continuous menu-driven interface allowing users to encrypt or decrypt multiple messages without restarting the application.
-* **Modular Architecture:** Cleanly separated logic with dedicated `encrypt` (Sender) and `decrypt` (Receiver) header and source files for high maintainability.
-* **Modern Build System:** Fully supported by a modern CMake build configuration targeting the C++17 standard for seamless cross-platform compilation.
+### Core Functionality
+- **Interactive CLI:** Continuous menu-driven interface — encrypt or decrypt multiple messages without restarting.
+- **Modular Code:** Separate `encrypt` (Sender) and `decrypt` (Receiver) modules.
+- **CMake Build:** C++17 build configuration for cross-platform compilation.
 
 ## 🛠️ Prerequisites
 
@@ -59,4 +59,4 @@ projectegnima/
 
 ---
 
-© 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved. Zenith is a Open Source Project Idea's by @roshhellwett
+© 2026 [Zenith Open Source Projects](https://zenithopensourceprojects.vercel.app/). All Rights Reserved. Zenith is an Open Source Project Idea by @roshhellwett
